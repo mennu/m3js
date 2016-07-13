@@ -1,0 +1,23 @@
+{
+  "name": "cw-view-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incture/cw-view-engine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/incture/cw-view-engine/issues"
+  },
+  "homepage": "https://github.com/incture/cw-view-engine#readme",
+  "dependencies": {
+    "canvas": "^1.4.0",
+    "jsdom": "^3.1.2"
+  }
+}
