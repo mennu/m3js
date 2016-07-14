@@ -49,7 +49,7 @@ $npm install m1js
   ```sh
   var m1js = require('m1js');
 
-  graphEngine.createABar({
+  m1js.createABar({
   	data : [{
   		label : "2012",
   		data : 50
@@ -76,7 +76,7 @@ $npm install m1js
   ```sh
   var m1js = require('m1js');
 
-  graphEngine.createALine({
+  m1js.createALine({
   	data : [{
   		label : "Sun",
   		data : 45
@@ -109,7 +109,7 @@ $npm install m1js
   ```sh
   var m1js = require('m1js');
 
-  graphEngine.createADonut({
+  m1js.createADonut({
   	data : [{
   		labels : "jQuery",
   		data : 45
@@ -131,7 +131,7 @@ $npm install m1js
   ```sh
   var m1js = require('m1js');
 
-  graphEngine.createAHBar({
+  m1js.createAHBar({
   	data : [{
   		labels : "USA",
   		data : 45
