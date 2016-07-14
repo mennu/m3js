@@ -1,5 +1,6 @@
-# m3js
-Simple Graphs at server
+# m1js
+  The goal is to create simple graphs at server end and save it to png, so the client can load it instead of preparing it.
+
 
 ###Install
 
@@ -151,7 +152,6 @@ $npm install m1js
 * Adding more Graphs
 * Adding 3D WebGl Graphs
 * Adding functionality for returning canvas objects.
-
 
 ####FAQ's
 
