@@ -2,13 +2,16 @@ var graphEngine = require("../index.js");
 
 graphEngine.createAPie({
 	data : [{
-		labels : "123456789",
+		labels : "Car",
 		data : 45
 	},{
-		labels : "123456789",
-		data : 20
+		labels : "Cycle",
+		data : 10
 	},{
-		labels : "123456789123456789",
+		labels : "Walk",
+		data : 10
+	},{
+		labels : "Bus",
 		data : 20
 	}],
 	outputFolder : __dirname,
@@ -19,39 +22,48 @@ graphEngine.createAPie({
 
 graphEngine.createABar({
 	data : [{
-		label : "123456789",
+		label : "2012",
+		data : 50
+	},{
+		label : "2013",
+		data : 35
+	},{
+		label : "2014",
 		data : 45
 	},{
-		label : "123456789",
+		label : "2015",
 		data : 20
 	},{
-		label : "123456789123456789",
+		label : "2016",
 		data : 80
 	}],
 	outputFolder : __dirname
 },function(imgPath){
 	console.log(imgPath);
-});	
+});
 
 graphEngine.createALine({
 	data : [{
-		label : "123456789",
+		label : "Sun",
 		data : 45
 	},{
-		label : "123456789",
+		label : "Mon",
 		data : 20
 	},{
-		label : "12345",
+		label : "Tue",
 		data : 80
 	},{
-		label : "123456789",
+		label : "Wed",
 		data : 45
 	},{
-		label : "123456789",
+		label : "Thr",
 		data : 20
 	},{
-		label : "12345",
+		label : "Fri",
 		data : 80
+	},{
+		label : "Sat",
+		data : 50
 	}],
 	outputFolder : __dirname
 },function(imgPath){
@@ -60,13 +72,13 @@ graphEngine.createALine({
 
 graphEngine.createADonut({
 	data : [{
-		labels : "123456789",
+		labels : "jQuery",
 		data : 45
 	},{
-		labels : "123456789",
+		labels : "Ruby",
 		data : 20
 	},{
-		labels : "123456789123456789",
+		labels : "Python",
 		data : 20
 	}],
 	outputFolder : __dirname,
@@ -77,14 +89,14 @@ graphEngine.createADonut({
 
 graphEngine.createAHBar({
 	data : [{
-		labels : "123456789",
+		labels : "USA",
 		data : 45
 	},{
-		labels : "123456789",
-		data : 20
+		labels : "Europe",
+		data : 50
 	},{
-		labels : "123456789123456789",
-		data : 20
+		labels : "Asia",
+		data : 60
 	}],
 	outputFolder : __dirname,
 	labelPath : "labels"

@@ -12,13 +12,16 @@ var hardColors = ["#3333CC","#993CF3","#C69633","#963939","#6FFF00","#C3690F","#
 
 module.exports = {
 	createAPie : function(opts, cb) {
-		var pieData = opts;
-		pieData.width ? pieData.width = pieData.width : pieData.width = 480;
-		pieData.height ? pieData.height = pieData.height : pieData.height = 250;
-		pieData.labelPath ? pieData.labelPath = pieData.labelPath : pieData.labelPath = "label";
-		pieData.labelData ? pieData.labelData = pieData.labelData : pieData.labelData = "data";
+		var pieData = {
+			width: opts.width || 480,
+			height: opts.height || 250,
+			labelPath: opts.labelPath || "label",
+			labelData: opts.labelData || "data",
+			data: opts.data || [],
+			outputFolder: opts.outputFolder || __dirname
+		}
 
-		jsdom.env({  
+		jsdom.env({
 
 		  html: "<html><body></body></html>",
 
@@ -53,7 +56,7 @@ module.exports = {
 					            blur: 3
 					        },
 					        script: function() {
-					            
+
 					        },
 					        exploded: 5
 					    }
@@ -64,7 +67,7 @@ module.exports = {
 					stream.on('data', function(chunk){
 					  out.write(chunk);
 					});
-					 
+
 					stream.on('end', function(){
 					  cb(pieData.outputFolder+'/'+fileName+".png");
 					});
@@ -73,14 +76,17 @@ module.exports = {
 		});
 	},
 	createABar : function(opts, cb) {
-		var barData = opts;
-		barData.width ? barData.width = barData.width : barData.width = 480;
-		barData.height ? barData.height = barData.height : barData.height = 250;
-		barData.labelPath ? barData.labelPath = barData.labelPath : barData.labelPath = "label";
-		barData.labelData ? barData.labelData = barData.labelData : barData.labelData = "data";
-		barData.color ? barData.color = barData.color : barData.color = "#993CF3";
-		
-		jsdom.env({  
+		var barData = {
+			width: opts.width || 480,
+			height: opts.height || 250,
+			labelPath: opts.labelPath || "label",
+			labelData: opts.labelData || "data",
+			color: opts.color || hardColors[parseInt(Math.random() * (14 - 0) + 0)],
+			data: opts.data || [],
+			outputFolder: opts.outputFolder || __dirname
+		}
+
+		jsdom.env({
 
 		  html: "<html><body></body></html>",
 
@@ -100,7 +106,7 @@ module.exports = {
 				    labels.push(barData.data[i][barData.labelPath]);
 				}
 				var colors = [barData.color];
-				
+
 					var bar = new myGraph.Bar({
 		                id: 'cvs',
 		                data: data,
@@ -141,7 +147,7 @@ module.exports = {
 							stream.on('data', function(chunk){
 							  out.write(chunk);
 							});
-							 
+
 							stream.on('end', function(){
 							  cb(barData.outputFolder + '/'+fileName+".png");
 							});
@@ -150,14 +156,18 @@ module.exports = {
 		});
 	},
 	createALine : function(opts, cb) {
-		var lineData = opts;
-		lineData.width ? lineData.width = lineData.width : lineData.width = 480;
-		lineData.height ? lineData.height = lineData.height : lineData.height = 250;
-		lineData.labelPath ? lineData.labelPath = lineData.labelPath : lineData.labelPath = "label";
-		lineData.labelData ? lineData.labelData = lineData.labelData : lineData.labelData = "data";
-		lineData.color ? lineData.color = lineData.color : lineData.color = "#993CF3";
-		
-		jsdom.env({  
+
+		var lineData = {
+			width: opts.width || 480,
+			height: opts.height || 250,
+			labelPath: opts.labelPath || "label",
+			labelData: opts.labelData || "data",
+			color: opts.color || hardColors[parseInt(Math.random() * (14 - 0) + 0)],
+			data: opts.data || [],
+			outputFolder: opts.outputFolder || __dirname
+		};
+
+		jsdom.env({
 
 		  html: "<html><body></body></html>",
 
@@ -196,7 +206,7 @@ module.exports = {
                         grid: {
                             color: '#ccc',
                             vlines: false,
-                            border: false                            
+                            border: false
                         }
                     },
                     text: {
@@ -218,14 +228,13 @@ module.exports = {
                     }
                 }
             }).on("draw",function(){
-            	console.log("event raised")
-		            	var fileName = crypto.randomBytes(20).toString('hex');
+            	var fileName = crypto.randomBytes(20).toString('hex');
 							var out = fs.createWriteStream(lineData.outputFolder + '/'+fileName+".png");
 							var stream = this.canvas.pngStream();
 							stream.on('data', function(chunk){
 							  out.write(chunk);
 							});
-							 
+
 							stream.on('end', function(){
 							  cb(lineData.outputFolder + '/'+fileName+".png");
 							});
@@ -234,13 +243,17 @@ module.exports = {
 		})
 	},
 	createADonut : function(opts, cb) {
-		var pieData = opts;
-		pieData.width ? pieData.width = pieData.width : pieData.width = 480;
-		pieData.height ? pieData.height = pieData.height : pieData.height = 250;
-		pieData.labelPath ? pieData.labelPath = pieData.labelPath : pieData.labelPath = "label";
-		pieData.labelData ? pieData.labelData = pieData.labelData : pieData.labelData = "data";
 
-		jsdom.env({  
+		var pieData = {
+			width: opts.width || 480,
+			height: opts.height || 250,
+			labelPath: opts.labelPath || "label",
+			labelData: opts.labelData || "data",
+			data: opts.data || [],
+			outputFolder: opts.outputFolder || __dirname
+		}
+
+		jsdom.env({
 
 		  html: "<html><body></body></html>",
 
@@ -275,7 +288,7 @@ module.exports = {
 					            blur: 3
 					        },
 					        script: function() {
-					            
+
 					        },
 					        exploded: 5
 					    }
@@ -286,7 +299,7 @@ module.exports = {
 					stream.on('data', function(chunk){
 					  out.write(chunk);
 					});
-					 
+
 					stream.on('end', function(){
 					  cb(pieData.outputFolder+'/'+fileName+".png");
 					});
@@ -295,14 +308,18 @@ module.exports = {
 		});
 	},
 	createAHBar : function(opts, cb) {
-		var barData = opts;
-		barData.width ? barData.width = barData.width : barData.width = 480;
-		barData.height ? barData.height = barData.height : barData.height = 250;
-		barData.labelPath ? barData.labelPath = barData.labelPath : barData.labelPath = "label";
-		barData.labelData ? barData.labelData = barData.labelData : barData.labelData = "data";
-		barData.color ? barData.color = barData.color : barData.color = "#993CF3";
-		
-		jsdom.env({  
+
+		var barData = {
+			width: opts.width || 480,
+			height: opts.height || 250,
+			labelPath: opts.labelPath || "label",
+			labelData: opts.labelData || "data",
+			color: opts.color || hardColors[parseInt(Math.random() * (14 - 0) + 0)],
+			data: opts.data || [],
+			outputFolder: opts.outputFolder || __dirname
+		}
+
+		jsdom.env({
 
 		  html: "<html><body></body></html>",
 
@@ -322,7 +339,7 @@ module.exports = {
 				    labels.push(barData.data[i][barData.labelPath]);
 				}
 				var colors = [barData.color];
-				
+
 					var bar = new myGraph.HBar({
 		                id: 'cvs',
 		                data: data,
@@ -344,7 +361,7 @@ module.exports = {
 							stream.on('data', function(chunk){
 							  out.write(chunk);
 							});
-							 
+
 							stream.on('end', function(){
 							  cb(barData.outputFolder + '/'+fileName+".png");
 							});
