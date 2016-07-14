@@ -1,21 +1,18 @@
 {
-  "name": "cw-view-engine",
+  "name": "m1js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/incture/cw-view-engine.git"
+    "url": "git+https://github.com/Mennu/m3js.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/incture/cw-view-engine/issues"
+    "url": "https://github.com/Mennu/m3js/issues"
   },
-  "homepage": "https://github.com/incture/cw-view-engine#readme",
+  "homepage": "https://github.com/Mennu/m3js#readme",
   "dependencies": {
     "canvas": "^1.4.0",
     "jsdom": "^3.1.2"
