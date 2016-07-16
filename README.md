@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/m1js.png?downloads=true&stars=true)](https://nodei.co/npm/m1js/)
+
 # m1js
   The goal is to create simple graphs at server end and save it to png, so the client can load it instead of preparing it.
 
