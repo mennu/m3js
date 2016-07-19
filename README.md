@@ -162,3 +162,15 @@ sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev
 
 Make sure you have G++ 4.8.
 sudo apt-get install g++-4.8
+
+####Preview
+
+![Donut](https://github.com/mennu/m3js/blob/master/donut.png?raw=true "Donut Graph")
+
+![HBar](https://github.com/mennu/m3js/blob/master/hbar.png?raw=true "HBar Graph")
+
+![Pie](https://github.com/mennu/m3js/blob/master/pie.png?raw=true "pie Graph")
+
+![Bar](https://github.com/mennu/m3js/blob/master/bar.png?raw=true "Bar Graph")
+
+![line-graph](https://github.com/mennu/m3js/blob/master/line-graph.png?raw=true "line Graph")

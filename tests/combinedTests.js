@@ -80,6 +80,15 @@ graphEngine.createADonut({
 	},{
 		labels : "Python",
 		data : 20
+	},{
+		labels : "jQuery",
+		data : 45
+	},{
+		labels : "Ruby",
+		data : 20
+	},{
+		labels : "Python",
+		data : 20
 	}],
 	outputFolder : __dirname,
 	labelPath : "labels"
@@ -89,6 +98,15 @@ graphEngine.createADonut({
 
 graphEngine.createAHBar({
 	data : [{
+		labels : "USA",
+		data : 45
+	},{
+		labels : "Europe",
+		data : 50
+	},{
+		labels : "Asia",
+		data : 60
+	},{
 		labels : "USA",
 		data : 45
 	},{

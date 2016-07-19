@@ -1,6 +1,6 @@
 {
   "name": "m1js",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -16,5 +16,27 @@
   "dependencies": {
     "canvas": "^1.4.0",
     "jsdom": "^3.1.2"
-  }
+  },
+  "keywords":[
+    "javascript graphs",
+    "javascript charts",
+    "web charts",
+    "web graphs",
+    "beautiful charts",
+    "library charts",
+    "js charts",
+    "graphs",
+    "ios",
+    "android",
+    "graphs",
+    "server graphs",
+    "lazy graphs",
+    "charts",
+    "server charts",
+    "lazy charts",
+    "pie chart",
+    "line graph",
+    "hbar graph",
+    "bar graph"
+  ]
 }
